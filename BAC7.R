@@ -6,7 +6,7 @@
   
   yearlyplastics.ts <- ts(data$Pieces_KM2, frequency = 12, start = c(2000,12), end = c(2011,12))
   yearlyplastics.ts2 <- ts(data2$Pieces_KM2, frequency = 1, start = 2000, end = 2011)
-  yearlyplastics.ts3 <- ts(data3$X50thSC, frequency = 1, start = 2010, end = 2018)
+  yearlyplastics.ts3 <- ts(data2, frequency = 1, start = 2000, end = 2008)
   
   test <- ts(data$Pieces_KM2, start = 2000,frequency = 12)
   
@@ -18,7 +18,7 @@
   fit <- stl(yearlyplastics.ts, s.window = "period")
   
   
-  ggseasonplot(yearlyplastics.ts, year.labels = TRUE, year.labels.left= TRUE)  
+  ggseasonplot(yearlyplastics.ts, year.labels = TRUE, year.labels.left= TRUE)
   
   
   
